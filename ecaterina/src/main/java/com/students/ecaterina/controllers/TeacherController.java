@@ -35,13 +35,6 @@ public class TeacherController {
     }
 
 
-//    private final TeacherService teacherService;
-//
-//    public TeacherController(TeacherService teacherService) {
-//        this.teacherService = teacherService;
-//    }
-
-
     @GetMapping("/teachers")
     public String listTeachers(Model model) {
         List<Teacher> listTeachers = teacherRepository.findAll();
@@ -79,13 +72,6 @@ public class TeacherController {
         }
         return "redirect:/teachers";
     }
-
-//    @PostMapping("/teachers/save")
-//    public String saveTeacher(@ModelAttribute("teacher") Teacher teacher, BindingResult bindingResult){
-//        teacherRepository.save(teacher);
-//        return "redirect:/teachers";
-//    }
-
 
     @GetMapping("/teachers/edit/{id}") ///showFormForUpdate/{id}
     public String showEditTeacherForm(@PathVariable("id") Long id, Model model) {

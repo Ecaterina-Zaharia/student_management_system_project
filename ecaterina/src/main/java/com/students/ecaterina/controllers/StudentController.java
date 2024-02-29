@@ -8,13 +8,10 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
 
 //http://localhost:8080/api/v1/
 @Controller
-//@RestController
-//@RequestMapping("/student")
 public class StudentController {
     private final StudentService studentService;
     private final FacultyRepository facultyRepository;
@@ -82,18 +79,5 @@ public class StudentController {
         this.studentService.deleteStudentById(id);
         return "redirect:/";
     }
-
-
-
-//    @GetMapping("/{id}")
-//    public StudentDTO getStudentById(@PathVariable("id")long id){
-//        return studentService.getUserById(id);
-//    }
-
-//    @PostMapping()
-//    public ResponseEntity<?> createUser(@RequestBody StudentDTO studentDTO){
-//        studentService.createStudent(studentDTO);
-//        return new ResponseEntity<>(HttpStatus.CREATED);
-//    }
 
 }

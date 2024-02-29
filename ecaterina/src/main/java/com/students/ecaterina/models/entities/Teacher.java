@@ -15,9 +15,6 @@ public class Teacher {
     @Column(name = "teacher_name")
     private String teacherName;
 
-//    @Column(name = "subject_name")
-//    private String subjectName;
-
     @ManyToMany
     @JoinTable(
             name = "teacher_subject",
@@ -74,23 +71,6 @@ public class Teacher {
 
     public void setSubjects(Set<Subject> subjects) {
         this.subjects = subjects;
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj)
-            return true;
-        if (obj == null)
-            return false;
-        if (getClass() != obj.getClass())
-            return false;
-        Subject other = (Subject) obj;
-        if (id == null) {
-            if (other.getId() != null)
-                return false;
-        } else if (!id.equals(other.getId()))
-            return false;
-        return true;
     }
 
     @Override

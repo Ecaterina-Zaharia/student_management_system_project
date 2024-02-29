@@ -1,12 +1,10 @@
 package com.students.ecaterina.controllers;
-
 import com.students.ecaterina.models.entities.Faculty;
 import com.students.ecaterina.repositories.FacultyRepository;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
-
 import java.util.List;
 
 @Controller

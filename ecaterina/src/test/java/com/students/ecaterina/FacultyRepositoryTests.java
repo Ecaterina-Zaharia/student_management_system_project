@@ -18,12 +18,12 @@ public class FacultyRepositoryTests {
     @Autowired
     private FacultyRepository repo;
 
-//    @Test
-//    public void testCreateFaculty(){
-//        Faculty savedFaculty = repo.save(new Faculty("Math"));
-//
-//        assertThat(savedFaculty.getId()).isGreaterThan(0);
-//    }
+    @Test
+    public void testCreateFaculty(){
+        Faculty savedFaculty = repo.save(new Faculty("Math"));
+
+        assertThat(savedFaculty.getId()).isGreaterThan(0);
+    }
 
 
 }
